@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create OKF"
+  short_description: "Create a conformant OKF knowledge bundle"
+  default_prompt: "Use $okf-create to create an OKF bundle from these sources."

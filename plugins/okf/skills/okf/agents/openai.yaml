@@ -1,0 +1,4 @@
+interface:
+  display_name: "OKF"
+  short_description: "Route OKF creation and upkeep"
+  default_prompt: "Use $okf to help me work with this OKF bundle."

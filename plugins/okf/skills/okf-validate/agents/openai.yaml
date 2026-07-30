@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate OKF"
+  short_description: "Validate and repair an OKF v0.2 bundle"
+  default_prompt: "Use $okf-validate to validate this OKF bundle and report any issues."

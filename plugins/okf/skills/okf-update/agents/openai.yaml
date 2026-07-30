@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update OKF"
+  short_description: "Safely update and curate an OKF bundle"
+  default_prompt: "Use $okf-update to update this OKF bundle from new evidence."

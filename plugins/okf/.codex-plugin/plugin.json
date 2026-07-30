@@ -1,0 +1,28 @@
+{
+  "name": "okf",
+  "version": "0.2.0",
+  "description": "Create, update, migrate, and validate Open Knowledge Format v0.2 bundles.",
+  "author": {
+    "name": "justusenumbers",
+    "url": "https://github.com/justusenumbers"
+  },
+  "homepage": "https://github.com/justusenumbers/okf-skills-plugin",
+  "repository": "https://github.com/justusenumbers/okf-skills-plugin",
+  "license": "MIT",
+  "keywords": ["okf", "knowledge", "markdown", "validation"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Open Knowledge Format",
+    "shortDescription": "Create and maintain OKF v0.2 bundles.",
+    "longDescription": "Create, update, migrate, and validate source-agnostic Open Knowledge Format v0.2 knowledge bundles.",
+    "developerName": "justusenumbers",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/justusenumbers/okf-skills-plugin",
+    "defaultPrompt": [
+      "Create an OKF v0.2 bundle from these sources.",
+      "Update this OKF bundle from new evidence.",
+      "Validate and safely repair this OKF bundle."
+    ]
+  }
+}
