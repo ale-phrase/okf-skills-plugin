@@ -1,6 +1,6 @@
-# OKF skills for Codex
+# OKF skills for Codex and Claude Code
 
-A Codex plugin for creating, updating, migrating, and validating source-agnostic [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) bundles.
+A plugin for creating, updating, migrating, and validating source-agnostic [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) bundles.
 
 ## Skills
 
@@ -13,14 +13,26 @@ The shared `okf_bundle.py` utility validates bundles, maintains managed indexes,
 
 ## Install
 
-Add this checkout as a local marketplace, then install the plugin:
+### Claude Code
 
-```powershell
-codex plugin marketplace add .
-codex plugin add okf@personal
+Send these as two separate prompts:
+
+```text
+/plugin marketplace add justusenumbers/okf-skills-plugin
 ```
 
-Start a new Codex task after installation so the skills are discovered.
+```text
+/plugin install okf@okf
+```
+
+### Codex
+
+```powershell
+codex plugin marketplace add justusenumbers/okf-skills-plugin
+codex plugin add okf@okf
+```
+
+Start a new task after installation so the skills are discovered.
 
 ## Validate
 

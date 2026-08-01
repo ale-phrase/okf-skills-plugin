@@ -1,6 +1,6 @@
 ---
 name: okf-update
-description: Conservatively update and curate existing Open Knowledge Format bundles from new source material. Use when Codex needs to enrich concepts, reconcile changed facts or schemas, add or deprecate knowledge, repair cross-references, refresh indexes and logs, or reorganize an OKF bundle without losing hand-authored content.
+description: Conservatively update and curate existing Open Knowledge Format bundles from new source material. Use when an agent needs to enrich concepts, reconcile changed facts or schemas, add or deprecate knowledge, repair cross-references, refresh indexes and logs, or reorganize an OKF bundle without losing hand-authored content.
 ---
 
 # Update an OKF Bundle

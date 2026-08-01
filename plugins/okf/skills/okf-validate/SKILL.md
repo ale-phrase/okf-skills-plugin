@@ -1,6 +1,6 @@
 ---
 name: okf-validate
-description: Validate and safely repair Open Knowledge Format v0.2 bundles. Use when Codex needs to check OKF conformance, audit provenance, trust, lifecycle, attested computations, metadata and cross-links, diagnose malformed concept or reserved files, verify index freshness, produce a machine-readable validation report, or fix confirmed bundle defects.
+description: Validate and safely repair Open Knowledge Format v0.2 bundles. Use when an agent needs to check OKF conformance, audit provenance, trust, lifecycle, attested computations, metadata and cross-links, diagnose malformed concept or reserved files, verify index freshness, produce a machine-readable validation report, or fix confirmed bundle defects.
 ---
 
 # Validate an OKF Bundle

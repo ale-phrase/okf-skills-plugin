@@ -1,6 +1,6 @@
 ---
 name: okf
-description: Route broad or ambiguous Open Knowledge Format work to the focused OKF skills and provide the shared v0.2 specification and tooling. Use when Codex needs to plan work across creating, updating, validating, migrating, or repairing an OKF bundle, or when the requested OKF operation is not yet clear.
+description: Route broad or ambiguous Open Knowledge Format work to the focused OKF skills and provide the shared v0.2 specification and tooling. Use when an agent needs to plan work across creating, updating, validating, migrating, or repairing an OKF bundle, or when the requested OKF operation is not yet clear.
 ---
 
 # OKF

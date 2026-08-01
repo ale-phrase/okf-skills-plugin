@@ -1,6 +1,6 @@
 {
   "name": "okf",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Create, update, migrate, and validate Open Knowledge Format v0.2 bundles.",
   "author": {
     "name": "justusenumbers",

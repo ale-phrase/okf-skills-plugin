@@ -1,6 +1,6 @@
 ---
 name: okf-create
-description: Create source-agnostic Open Knowledge Format bundles from local files, URLs, schemas, repositories, or supplied facts. Use when Codex needs to initialize an OKF bundle, design its concept hierarchy, author concept documents, add indexes and history, or turn existing knowledge into conformant OKF v0.2 Markdown.
+description: Create source-agnostic Open Knowledge Format bundles from local files, URLs, schemas, repositories, or supplied facts. Use when an agent needs to initialize an OKF bundle, design its concept hierarchy, author concept documents, add indexes and history, or turn existing knowledge into conformant OKF v0.2 Markdown.
 ---
 
 # Create an OKF Bundle
