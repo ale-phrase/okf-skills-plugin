@@ -1,13 +1,14 @@
 {
   "name": "okf",
-  "version": "0.2.1",
-  "description": "Create, update, migrate, and validate Open Knowledge Format v0.2 bundles.",
+  "version": "0.3.0",
+  "description": "Create, update, validate, refresh, share, and (optionally) passively capture Open Knowledge Format v0.2 bundles.",
   "author": {
-    "name": "justusenumbers",
-    "url": "https://github.com/justusenumbers"
+    "name": "ale-phrase",
+    "url": "https://github.com/ale-phrase"
   },
-  "homepage": "https://github.com/justusenumbers/okf-skills-plugin",
-  "repository": "https://github.com/justusenumbers/okf-skills-plugin",
+  "homepage": "https://github.com/ale-phrase/okf-skills-plugin",
+  "repository": "https://github.com/ale-phrase/okf-skills-plugin",
   "license": "MIT",
-  "keywords": ["okf", "knowledge", "markdown", "validation"]
+  "keywords": ["okf", "knowledge", "markdown", "validation", "freshness", "share", "passive", "cache"],
+  "hooks": "./hooks/hooks.json"
 }
