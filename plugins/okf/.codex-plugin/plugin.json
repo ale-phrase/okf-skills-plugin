@@ -1,28 +1,28 @@
 {
   "name": "okf",
-  "version": "0.2.1",
-  "description": "Create, update, migrate, and validate Open Knowledge Format v0.2 bundles.",
+  "version": "0.3.0",
+  "description": "Create, update, validate, refresh, share, and (optionally) passively capture Open Knowledge Format v0.2 bundles.",
   "author": {
-    "name": "justusenumbers",
-    "url": "https://github.com/justusenumbers"
+    "name": "ale-phrase",
+    "url": "https://github.com/ale-phrase"
   },
-  "homepage": "https://github.com/justusenumbers/okf-skills-plugin",
-  "repository": "https://github.com/justusenumbers/okf-skills-plugin",
+  "homepage": "https://github.com/ale-phrase/okf-skills-plugin",
+  "repository": "https://github.com/ale-phrase/okf-skills-plugin",
   "license": "MIT",
-  "keywords": ["okf", "knowledge", "markdown", "validation"],
+  "keywords": ["okf", "knowledge", "markdown", "validation", "freshness", "share", "passive", "cache"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Open Knowledge Format",
-    "shortDescription": "Create and maintain OKF v0.2 bundles.",
-    "longDescription": "Create, update, migrate, and validate source-agnostic Open Knowledge Format v0.2 knowledge bundles.",
-    "developerName": "justusenumbers",
+    "shortDescription": "Create, maintain, refresh, and share OKF v0.2 bundles.",
+    "longDescription": "Create, update, validate, refresh (anti-staleness), and share source-agnostic Open Knowledge Format v0.2 knowledge bundles, with optional passive capture. Hooks are Claude Code only.",
+    "developerName": "ale-phrase",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
-    "websiteURL": "https://github.com/justusenumbers/okf-skills-plugin",
+    "websiteURL": "https://github.com/ale-phrase/okf-skills-plugin",
     "defaultPrompt": [
       "Create an OKF v0.2 bundle from these sources.",
-      "Update this OKF bundle from new evidence.",
-      "Validate and safely repair this OKF bundle."
+      "Refresh the stale concepts in this OKF bundle.",
+      "Export this OKF bundle as a shareable viz.html and archive."
     ]
   }
 }

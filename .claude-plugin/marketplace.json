@@ -1,15 +1,15 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "okf",
-  "description": "Open Knowledge Format skills for creating, updating, migrating, and validating OKF bundles.",
+  "description": "Open Knowledge Format skills, commands, and hooks for creating, updating, validating, refreshing, and sharing OKF bundles.",
   "owner": {
-    "name": "justusenumbers",
-    "url": "https://github.com/justusenumbers"
+    "name": "ale-phrase",
+    "url": "https://github.com/ale-phrase"
   },
   "plugins": [
     {
       "name": "okf",
-      "description": "Create, update, migrate, and validate Open Knowledge Format v0.2 bundles.",
+      "description": "Create, update, validate, refresh, share, and optionally passively capture Open Knowledge Format v0.2 bundles.",
       "source": "./plugins/okf",
       "category": "productivity"
     }
