@@ -9,7 +9,7 @@ This is opt-in. Check the mode first: `python ../okf/scripts/okf_config.py get c
 
 ## Choose the source and the target
 
-- **Source material.** On demand: the current session. Otherwise drain the queue the Stop hook writes (`~/.okf/capture-queue.jsonl`, or next to `$OKF_CONFIG`); each line points to a session transcript. Process and then clear handled lines.
+- **Source material.** On demand: the current session. Otherwise drain the queue the Stop hook writes (`~/.okf/capture-queue.jsonl`, or next to `$OKF_CONFIG`); each line points to a session transcript. Keep the exact raw line for each entry you process. After processing, remove only those lines — pipe them to `python ../okf/scripts/okf_dequeue.py`, don't truncate the file — so any line the Stop hook appended mid-drain survives.
 - **Target bundle.** Use `capture_bundle`, then `bundles_root`, then a client bundle whose name matches the work, then the cwd. Read `okf_config.py show`.
 
 ## Distill (judgment, not transcription)
