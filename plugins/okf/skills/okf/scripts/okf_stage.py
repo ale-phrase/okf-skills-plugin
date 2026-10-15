@@ -10,6 +10,7 @@ happen — the hook never invokes a model or commits anything. Non-fatal on erro
 
 from __future__ import annotations
 
+import fcntl
 import json
 import sys
 from datetime import datetime, timezone
@@ -41,16 +42,24 @@ def main() -> int:
             "cwd": cwd,
             "mode": mode,
         }
-        # Dedupe: skip if the last queued entry is the same transcript.
-        if queue.exists():
+        # Shares a lock with okf_dequeue.py so a drain's read-modify-write
+        # can't lose an append that lands mid-drain.
+        lock_path = queue.with_suffix(queue.suffix + ".lock")
+        with open(lock_path, "w") as lockfh:
+            fcntl.flock(lockfh, fcntl.LOCK_EX)
             try:
-                last = queue.read_text(encoding="utf-8").strip().splitlines()[-1]
-                if json.loads(last).get("transcript_path") == record["transcript_path"]:
-                    return 0
-            except Exception:
-                pass
-        with queue.open("a", encoding="utf-8") as fh:
-            fh.write(json.dumps(record) + "\n")
+                # Dedupe: skip if the last queued entry is the same transcript.
+                if queue.exists():
+                    try:
+                        last = queue.read_text(encoding="utf-8").strip().splitlines()[-1]
+                        if json.loads(last).get("transcript_path") == record["transcript_path"]:
+                            return 0
+                    except Exception:
+                        pass
+                with queue.open("a", encoding="utf-8") as fh:
+                    fh.write(json.dumps(record) + "\n")
+            finally:
+                fcntl.flock(lockfh, fcntl.LOCK_UN)
     except Exception:
         return 0
     return 0
