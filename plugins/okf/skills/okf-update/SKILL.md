@@ -18,8 +18,9 @@ description: Conservatively update and curate existing Open Knowledge Format bun
 2. Keep concept paths stable. Rename or move a concept only when the user requests the migration or the old identity is materially misleading; update every known inbound link in the same change.
 3. Add citations for newly sourced claims. When sources conflict, describe the conflict or request direction rather than selecting silently.
 4. Run the shared `stamp` command only for concepts with meaningful content or metadata changes. It updates `generated.at`; pass `--by` when the concept has no existing `generated.by`. Do not stamp formatting-only edits.
-5. Run `index BUNDLE --check`. Use `--write` for missing or marker-managed indexes. If an existing index has no managed markers, edit its entries manually or obtain agreement to adopt managed sections; never overwrite it wholesale.
-6. Add one concise `log` entry per affected scope after the final change set is known. Do not log validation-only or formatting-only activity.
+5. For each stamped concept, set a fresh `stale_after` matched to its volatility (short for live connector data, longer for stable reference). Stamping resets `generated.at`, so an old `stale_after` would leave a just-updated concept looking expired or expiring on its original schedule. Skip it for concepts that never carried freshness metadata unless the evidence supports a horizon.
+6. Run `index BUNDLE --check`. Use `--write` for missing or marker-managed indexes. If an existing index has no managed markers, edit its entries manually or obtain agreement to adopt managed sections; never overwrite it wholesale.
+7. Add one concise `log` entry per affected scope after the final change set is known. Do not log validation-only or formatting-only activity.
 
 ## Verify and hand off
 
